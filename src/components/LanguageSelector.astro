@@ -1,0 +1,87 @@
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import IconLanguage from "@/assets/icons/IconLanguage.svg";
+import {
+  LOCALE_LABELS,
+  SUPPORTED_LOCALES,
+  type SupportedLocale,
+} from "@/i18n/locales";
+import { useTranslations } from "@/i18n";
+import { stripBase, stripLocale } from "@/utils/withBase";
+import config from "@/config";
+
+const locale = (Astro.currentLocale ?? config.site.lang) as SupportedLocale;
+const t = useTranslations(locale);
+
+const relativePath = stripBase(Astro.url.pathname);
+const pathWithoutTrailingSlash =
+  relativePath.endsWith("/") && relativePath !== "/"
+    ? relativePath.slice(0, -1)
+    : relativePath;
+const currentPath = stripLocale(pathWithoutTrailingSlash, locale);
+const pathForLocaleUrl =
+  currentPath === "/" ? "" : currentPath.replace(/^\/+/, "");
+
+const languageLinks = SUPPORTED_LOCALES.map(code => ({
+  code,
+  label: LOCALE_LABELS[code],
+  href: getRelativeLocaleUrl(code, pathForLocaleUrl),
+  isCurrent: code === locale,
+}));
+---
+
+<details class="language-selector relative">
+  <summary
+    class="focus-outline hover:text-accent flex size-12 list-none items-center justify-center sm:size-8 [&::-webkit-details-marker]:hidden"
+    title={t.a11y.selectLanguage}
+    aria-label={t.a11y.selectLanguage}
+  >
+    <IconLanguage class="size-6" />
+    <span class="sr-only">{t.a11y.selectLanguage}</span>
+  </summary>
+
+  <ul
+    class="border-border bg-background absolute end-0 z-20 mt-2 min-w-36 rounded border p-2 shadow-sm"
+  >
+    {
+      languageLinks.map(({ code, label, href, isCurrent }) => (
+        <li>
+          <a
+            href={href}
+            data-language-link
+            data-locale={code}
+            aria-current={isCurrent ? "true" : undefined}
+            class:list={[
+              "hover:text-accent block rounded px-3 py-2 text-sm whitespace-nowrap",
+              { "text-accent font-semibold": isCurrent },
+            ]}
+          >
+            {label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</details>
+
+<script>
+  function rememberLanguageChoice() {
+    document.querySelectorAll("[data-language-link]").forEach(link => {
+      if (link instanceof HTMLElement && link.dataset.bound === "true") return;
+
+      link.addEventListener("click", () => {
+        const locale = link.getAttribute("data-locale");
+        if (locale) {
+          localStorage.setItem("preferredLocale", locale);
+        }
+      });
+
+      if (link instanceof HTMLElement) {
+        link.dataset.bound = "true";
+      }
+    });
+  }
+
+  rememberLanguageChoice();
+  document.addEventListener("astro:after-swap", rememberLanguageChoice);
+</script>

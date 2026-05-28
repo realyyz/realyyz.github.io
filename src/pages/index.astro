@@ -166,9 +166,12 @@ const baseUrl = import.meta.env.BASE_URL;
 
     if (currentPath !== basePath) return;
 
-    const preferredLocale = navigator.languages
-      ?.map(matchSupportedLocale)
-      .find(Boolean);
+    const savedLocale = matchSupportedLocale(
+      localStorage.getItem("preferredLocale") || ""
+    );
+    const preferredLocale =
+      savedLocale ??
+      navigator.languages?.map(matchSupportedLocale).find(Boolean);
 
     if (!preferredLocale || preferredLocale === defaultLocale) return;
 

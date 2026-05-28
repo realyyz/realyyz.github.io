@@ -59,6 +59,7 @@ export default {
     closeMenu: "Close menu",
     toggleTheme: "Toggle theme",
     searchPlaceholder: "Search posts...",
+    selectLanguage: "Select language",
     noResults: "No results found",
     goToPreviousPage: "Go to previous page",
     goToNextPage: "Go to next page",
