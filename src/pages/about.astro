@@ -1,0 +1,41 @@
+---
+import { getCollection, render } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Breadcrumb from "@/components/Breadcrumb.astro";
+import Main from "@/components/Main.astro";
+import Footer from "@/components/Footer.astro";
+import { DEFAULT_LOCALE } from "@/i18n/locales";
+import config from "@/config";
+
+const locale = Astro.currentLocale ?? DEFAULT_LOCALE;
+const pages = await getCollection("pages");
+const about =
+  pages.find(page => page.id === `${locale}/about`) ??
+  pages.find(page => page.id === "about");
+
+if (!about) {
+  throw new Error(
+    "Missing content entry: `about.md` or `about.mdx` in `src/content/pages/`"
+  );
+}
+
+const { Content } = await render(about);
+---
+
+<Layout
+  title={`${about.data.title} | ${config.site.title}`}
+  description={about.data.description}
+  ogImage={about.data.ogImage}
+  canonicalURL={about.data.canonicalURL}
+>
+  <Header />
+
+  <Breadcrumb />
+
+  <Main pageTitle={about.data.title} class="app-prose">
+    <Content />
+  </Main>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,55 @@
+---
+import { type CollectionEntry, getCollection } from "astro:content";
+import PostPage from "../../../posts/[...slug]/index.astro";
+import { NON_DEFAULT_LOCALES } from "@/i18n/locales";
+import { getPostSlug } from "@/utils/getPostPaths";
+import { getPostsByLocale } from "@/utils/getPostsByLocale";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+
+  return NON_DEFAULT_LOCALES.flatMap(locale => {
+    const sortedPosts = getSortedPosts(getPostsByLocale(posts, locale));
+
+    return sortedPosts.map((post, index) => ({
+      params: { locale, slug: getPostSlug(post.id, post.filePath) },
+      props: {
+        post,
+        prevPost:
+          index > 0
+            ? {
+                id: sortedPosts[index - 1].id,
+                title: sortedPosts[index - 1].data.title,
+                filePath: sortedPosts[index - 1].filePath,
+              }
+            : null,
+        nextPost:
+          index < sortedPosts.length - 1
+            ? {
+                id: sortedPosts[index + 1].id,
+                title: sortedPosts[index + 1].data.title,
+                filePath: sortedPosts[index + 1].filePath,
+              }
+            : null,
+      },
+    }));
+  });
+}
+
+type AdjacentPost = {
+  id: string;
+  title: string;
+  filePath: string | undefined;
+} | null;
+
+type Props = {
+  post: CollectionEntry<"posts">;
+  prevPost: AdjacentPost;
+  nextPost: AdjacentPost;
+};
+
+const { post, prevPost, nextPost } = Astro.props as Props;
+---
+
+<PostPage {post} {prevPost} {nextPost} />
