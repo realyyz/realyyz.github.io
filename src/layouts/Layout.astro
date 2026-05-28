@@ -2,6 +2,7 @@
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { RTL_LOCALES } from "@/i18n/locales";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getAssetPath } from "@/utils/withBase";
 import config from "@/config";
@@ -28,12 +29,14 @@ const rssHref = getRelativeLocaleUrl(
   Astro.currentLocale ?? config.site.lang,
   "rss.xml"
 );
+const currentLocale = Astro.currentLocale ?? site.lang;
+const dir = RTL_LOCALES.includes(currentLocale) ? "rtl" : (site.dir ?? "ltr");
 ---
 
 <!doctype html>
 <html
-  dir={site.dir ?? "ltr"}
-  lang={Astro.currentLocale ?? site.lang}
+  dir={dir}
+  lang={currentLocale}
   class="overflow-y-scroll scroll-smooth"
 >
   <head>
