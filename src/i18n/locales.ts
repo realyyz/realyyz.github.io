@@ -86,7 +86,22 @@ export function getCanonicalLocale(locale: string | undefined): SupportedLocale 
     CANONICAL_LOCALES_BY_LOWERCASE[normalized] ??
     LOCALE_REDIRECT_ALIASES[normalized] ??
     LOCALE_REDIRECT_ALIASES[normalized.split("-")[0]] ??
+    CANONICAL_LOCALES_BY_LOWERCASE[normalized.split("-")[0]] ??
     DEFAULT_LOCALE
+  );
+}
+
+export function getCanonicalLocaleIfSupported(
+  locale: string | undefined
+): SupportedLocale | undefined {
+  const normalized = String(locale || "")
+    .toLowerCase()
+    .replaceAll("_", "-");
+
+  return (
+    CANONICAL_LOCALES_BY_LOWERCASE[normalized] ??
+    LOCALE_REDIRECT_ALIASES[normalized] ??
+    LOCALE_REDIRECT_ALIASES[normalized.split("-")[0]]
   );
 }
 

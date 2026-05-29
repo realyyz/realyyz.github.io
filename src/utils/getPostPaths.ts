@@ -1,5 +1,8 @@
 import { BLOG_PATH } from "@/content.config";
-import { DEFAULT_LOCALE, isSupportedLocale } from "@/i18n/locales";
+import {
+  DEFAULT_LOCALE,
+  getCanonicalLocaleIfSupported,
+} from "@/i18n/locales";
 import { getLocaleUrl } from "@/utils/getLocaleUrl";
 import { slugifyStr } from "./slugify";
 import config from "@/config";
@@ -24,14 +27,12 @@ function getPostRelativePath(filePath: string | undefined): string {
 
 function getPostLocaleFromSegments(segments: string[]): string | undefined {
   const [firstSegment] = segments;
-  return firstSegment && isSupportedLocale(firstSegment)
-    ? firstSegment
-    : undefined;
+  return getCanonicalLocaleIfSupported(firstSegment);
 }
 
 function stripLocaleSegment(segments: string[]): string[] {
   const [firstSegment, ...restSegments] = segments;
-  return firstSegment && isSupportedLocale(firstSegment) ? restSegments : segments;
+  return getCanonicalLocaleIfSupported(firstSegment) ? restSegments : segments;
 }
 
 function getPostPathSegments(filePath: string | undefined): string[] {
@@ -39,10 +40,9 @@ function getPostPathSegments(filePath: string | undefined): string[] {
     .split("/")
     .filter(path => path !== "")
     .filter(path => !path.startsWith("_"))
-    .slice(0, -1)
-    .map(segment => slugifyStr(segment));
+    .slice(0, -1);
 
-  return stripLocaleSegment(segments);
+  return stripLocaleSegment(segments).map(segment => slugifyStr(segment));
 }
 
 function getIdSlug(id: string): string {
