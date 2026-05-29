@@ -15,6 +15,7 @@ export default defineAstroPaperConfig({
   posts: {
     perPage: 4,
     perIndex: 4,
+    rssLocale: "zh",
     scheduledPostMargin: 15 * 60 * 1000,
   },
   features: {

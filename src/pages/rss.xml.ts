@@ -7,14 +7,15 @@ import config from "@/config";
 
 export async function GET() {
   const posts = await getCollection("posts");
-  const sortedPosts = getSortedPosts(getPostsByLocale(posts, config.site.lang));
+  const rssLocale = config.posts.rssLocale;
+  const sortedPosts = getSortedPosts(getPostsByLocale(posts, rssLocale));
 
   return rss({
     title: config.site.title,
     description: config.site.description,
     site: config.site.url,
     items: sortedPosts.map(({ data, id, filePath }) => ({
-      link: getPostUrl(id, filePath, config.site.lang),
+      link: getPostUrl(id, filePath, rssLocale),
       title: data.title,
       description: data.description,
       pubDate: new Date(data.modDatetime ?? data.pubDatetime),

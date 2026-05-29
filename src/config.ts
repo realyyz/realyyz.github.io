@@ -6,6 +6,7 @@
  */
 import userConfig from "@/astro-paper.config";
 import type { ResolvedAstroPaperConfig } from "./types/config";
+import { DEFAULT_LOCALE } from "./i18n/locales";
 import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
 
 const DEFAULT_OG_IMAGE = "default-og.jpg";
@@ -23,6 +24,7 @@ const config: ResolvedAstroPaperConfig = {
   posts: {
     perPage: userConfig.posts?.perPage ?? 4,
     perIndex: userConfig.posts?.perIndex ?? 4,
+    rssLocale: userConfig.posts?.rssLocale ?? DEFAULT_LOCALE,
     scheduledPostMargin:
       userConfig.posts?.scheduledPostMargin ?? 15 * 60 * 1000,
   },
