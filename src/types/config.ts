@@ -1,5 +1,3 @@
-import type { SupportedLocale } from "../i18n/locales";
-
 interface SiteConfig {
   /** Deployed URL of the site, e.g. "https://example.com" */
   url: string;
@@ -28,8 +26,6 @@ interface PostsConfig {
   perPage?: number;
   /** Posts shown on the index/home page */
   perIndex?: number;
-  /** Locale used by the root RSS feed at /rss.xml */
-  rssLocale?: SupportedLocale;
   /**
    * Scheduled posts within this window (ms) of their pubDatetime
    * are shown as published. Defaults to 15 minutes.

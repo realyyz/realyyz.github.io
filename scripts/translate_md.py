@@ -26,19 +26,56 @@ RETRY_STATUS_CODES = {429, 500, 503}
 NON_RETRY_STATUS_CODES = {400, 401, 402, 422}
 USER_ID_RE = re.compile(r"^[a-zA-Z0-9\-_]{1,512}$")
 
-SUPPORTED_LOCALES = ("en", "zh", "fr", "es", "de", "tr", "ar", "vi", "ja", "ko")
+SUPPORTED_LOCALES = (
+    "en",
+    "zh",
+    "zh-TW",
+    "ar",
+    "id",
+    "de",
+    "el",
+    "es",
+    "fa",
+    "fr",
+    "hi",
+    "it",
+    "ja",
+    "ko",
+    "nl",
+    "pl",
+    "pt-BR",
+    "ru",
+    "th",
+    "tr",
+    "uk",
+    "ur",
+    "vi",
+)
 NON_DEFAULT_LOCALES = set(SUPPORTED_LOCALES) - {"en"}
 LOCALE_LABELS = {
     "en": "English",
-    "zh": "Chinese",
-    "fr": "French",
-    "es": "Spanish",
-    "de": "German",
-    "tr": "Turkish",
+    "zh": "Simplified Chinese",
+    "zh-TW": "Traditional Chinese (Taiwan)",
     "ar": "Arabic",
-    "vi": "Vietnamese",
+    "id": "Indonesian",
+    "de": "German",
+    "el": "Greek",
+    "es": "Spanish",
+    "fa": "Persian",
+    "fr": "French",
+    "hi": "Hindi",
+    "it": "Italian",
     "ja": "Japanese",
     "ko": "Korean",
+    "nl": "Dutch",
+    "pl": "Polish",
+    "pt-BR": "Portuguese (Brazil)",
+    "ru": "Russian",
+    "th": "Thai",
+    "tr": "Turkish",
+    "uk": "Ukrainian",
+    "ur": "Urdu",
+    "vi": "Vietnamese",
 }
 
 
