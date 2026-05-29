@@ -2,8 +2,8 @@
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 import {
-  RTL_LOCALES,
   SUPPORTED_LOCALES,
+  isRtlLocale,
   type SupportedLocale,
 } from "@/i18n/locales";
 import {
@@ -46,7 +46,7 @@ const xDefaultAlternate = getXDefaultAlternate(
   Astro.url.pathname,
   currentLocale
 );
-const dir = RTL_LOCALES.includes(currentLocale) ? "rtl" : (site.dir ?? "ltr");
+const dir = isRtlLocale(currentLocale) ? "rtl" : (site.dir ?? "ltr");
 ---
 
 <!doctype html>

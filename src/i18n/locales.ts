@@ -75,3 +75,7 @@ export const LOCALE_REDIRECT_ALIASES: Record<string, SupportedLocale> = {
 export function isSupportedLocale(locale: string): locale is SupportedLocale {
   return SUPPORTED_LOCALES.includes(locale as SupportedLocale);
 }
+
+export function isRtlLocale(locale: string): boolean {
+  return RTL_LOCALES.includes(locale as SupportedLocale);
+}
