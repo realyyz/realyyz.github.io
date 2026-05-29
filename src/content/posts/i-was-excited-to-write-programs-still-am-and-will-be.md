@@ -9,7 +9,7 @@ tags:
   - Notes
 ---
 
->**Summary**
+>**Abstract**
 >
 >This article isn’t about “programmers will never be replaced.” It’s about why programming matters—not primarily as a high-income profession, but because it gave individuals, for the first time, the ability to converse directly with general-purpose computing power.
 >
