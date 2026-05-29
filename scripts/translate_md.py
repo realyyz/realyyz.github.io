@@ -159,7 +159,8 @@ def system_prompt(target_locale: str) -> str:
         "inline code, code fences, and blank-line rhythm.\n"
         "Do not include YAML frontmatter in body_markdown.\n"
         "Do not translate code, URLs, file paths, package names, or tags.\n"
-        "Keep the author's reflective personal voice natural in the target language."
+        "Keep the author's reflective personal voice natural in the target language.\n"
+        "Translate for meaning, not word-for-word. Avoid calques and machine-translation phrasing. Rewrite sentences when needed so the result reads like a native essay in the target language."
     )
 
 
