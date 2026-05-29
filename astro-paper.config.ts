@@ -30,9 +30,9 @@ export default defineAstroPaperConfig({
   },
   socials: [
     { name: "github",   url: "https://github.com/realyyz" },
-    { name: "x",        url: "https://x.com/username" },
-    { name: "linkedin", url: "https://www.linkedin.com/in/username/" },
-    { name: "mail",     url: "mailto:yourmail@gmail.com" },
+    { name: "x",        url: "https://mastodon.social/@you_zhou" },
+    { name: "linkedin", url: "https://www.linkedin.com/in/you-zhou-793b14224/" },
+    { name: "mail",     url: "mailto:1280049620zy@gmail.com" },
   ],
   shareLinks: [
     { name: "whatsapp", url: "https://wa.me/?text=" },
