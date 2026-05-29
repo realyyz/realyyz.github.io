@@ -1,5 +1,5 @@
 ---
-import { getRelativeLocaleUrl } from "astro:i18n";
+import { getLocaleUrl } from "@/utils/getLocaleUrl";
 import { stripBase, stripLocale } from "@/utils/withBase";
 import { useTranslations } from "@/i18n";
 import config from "@/config";
@@ -62,7 +62,7 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
     class="font-light [&>li]:inline [&>li:not(:last-child)>a]:hover:opacity-100"
   >
     <li>
-      <a href={getRelativeLocaleUrl(locale, "")} class="opacity-80">
+      <a href={getLocaleUrl(locale)} class="opacity-80">
         {t.nav.home}
       </a>
       <span aria-hidden="true" class="opacity-80">&raquo;</span>
@@ -82,7 +82,7 @@ if (breadcrumbList[0] === "tags" && !isNaN(Number(breadcrumbList[2]))) {
         ) : (
           <li>
             <a
-              href={getRelativeLocaleUrl(locale, breadcrumb)}
+              href={getLocaleUrl(locale, breadcrumb)}
               class="capitalize opacity-70"
             >
               {navLabels[breadcrumb] ?? decodeSegment(breadcrumb)}

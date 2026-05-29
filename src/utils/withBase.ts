@@ -8,8 +8,15 @@ const baseRoot = base === "" ? "/" : `${base}/`;
  */
 export function stripLocale(pathname: string, locale: string): string {
   const prefix = `/${locale}`;
+  const lowerPathname = pathname.toLowerCase();
+  const lowerPrefix = prefix.toLowerCase();
+
   if (pathname === prefix) return "/";
   if (pathname.startsWith(`${prefix}/`)) return pathname.slice(prefix.length);
+  if (lowerPathname === lowerPrefix) return "/";
+  if (lowerPathname.startsWith(`${lowerPrefix}/`)) {
+    return pathname.slice(prefix.length);
+  }
   return pathname;
 }
 

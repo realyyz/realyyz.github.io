@@ -1,7 +1,7 @@
 import rss from "@astrojs/rss";
 import type { CollectionEntry } from "astro:content";
-import { getRelativeLocaleUrl } from "astro:i18n";
 import { getHomeDescription } from "@/i18n/homeCopy";
+import { getLocaleUrl } from "@/utils/getLocaleUrl";
 import { getPostUrl } from "@/utils/getPostPaths";
 import config from "@/config";
 
@@ -12,7 +12,7 @@ function getAbsoluteUrl(path: string): string {
 }
 
 export function getLocaleSiteUrl(locale: string): string {
-  return getAbsoluteUrl(getRelativeLocaleUrl(locale, ""));
+  return getAbsoluteUrl(getLocaleUrl(locale));
 }
 
 export function buildRssFeed(locale: string, posts: Post[]) {

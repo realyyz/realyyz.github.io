@@ -1,9 +1,9 @@
-import { getRelativeLocaleUrl } from "astro:i18n";
 import {
   DEFAULT_LOCALE,
   SUPPORTED_LOCALES,
   type SupportedLocale,
 } from "@/i18n/locales";
+import { getLocaleUrl } from "@/utils/getLocaleUrl";
 import { stripBase, stripLocale } from "@/utils/withBase";
 
 function getPathForLocaleUrl(pathname: string, currentLocale: string): string {
@@ -26,7 +26,7 @@ export function getLocaleAlternates(
 
   return locales.map(locale => ({
     locale,
-    href: getRelativeLocaleUrl(locale, pathForLocaleUrl),
+    href: getLocaleUrl(locale, pathForLocaleUrl),
   }));
 }
 
@@ -34,7 +34,7 @@ export function getXDefaultAlternate(
   pathname: string,
   currentLocale: string
 ): string {
-  return getRelativeLocaleUrl(
+  return getLocaleUrl(
     DEFAULT_LOCALE,
     getPathForLocaleUrl(pathname, currentLocale)
   );

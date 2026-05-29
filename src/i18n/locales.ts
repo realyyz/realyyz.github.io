@@ -72,6 +72,24 @@ export const LOCALE_REDIRECT_ALIASES: Record<string, SupportedLocale> = {
   "pt-br": "pt-BR",
 };
 
+const CANONICAL_LOCALES_BY_LOWERCASE: Record<string, SupportedLocale> =
+  Object.fromEntries(
+    SUPPORTED_LOCALES.map(locale => [locale.toLowerCase(), locale])
+  ) as Record<string, SupportedLocale>;
+
+export function getCanonicalLocale(locale: string | undefined): SupportedLocale {
+  const normalized = String(locale || DEFAULT_LOCALE)
+    .toLowerCase()
+    .replaceAll("_", "-");
+
+  return (
+    CANONICAL_LOCALES_BY_LOWERCASE[normalized] ??
+    LOCALE_REDIRECT_ALIASES[normalized] ??
+    LOCALE_REDIRECT_ALIASES[normalized.split("-")[0]] ??
+    DEFAULT_LOCALE
+  );
+}
+
 export function isSupportedLocale(locale: string): locale is SupportedLocale {
   return SUPPORTED_LOCALES.includes(locale as SupportedLocale);
 }

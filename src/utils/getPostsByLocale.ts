@@ -6,5 +6,5 @@ export function getPostsByLocale(
   posts: CollectionEntry<"posts">[],
   locale: string | undefined = DEFAULT_LOCALE
 ) {
-  return posts.filter(post => getPostLocale(post.id) === locale);
+  return posts.filter(post => getPostLocale(post.id, post.filePath) === locale);
 }
