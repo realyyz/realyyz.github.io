@@ -1,39 +1,74 @@
 ---
 import Layout from "./Layout.astro";
+import type { SupportedLocale } from "@/i18n/locales";
 import config from "@/config";
 
 type Props = {
   title?: string;
+  headline?: string;
   description?: string;
+  abstract?: string;
   ogImage?: string;
   canonicalURL?: string;
   pubDatetime?: Date;
   modDatetime?: Date | null;
+  locale?: string;
+  alternateLocales?: readonly SupportedLocale[];
 };
 
 const { site } = config;
 
-const { title, description, ogImage, canonicalURL, pubDatetime, modDatetime } =
-  Astro.props;
+const {
+  title,
+  headline,
+  description,
+  abstract: articleAbstract,
+  ogImage,
+  canonicalURL,
+  pubDatetime,
+  modDatetime,
+  locale,
+  alternateLocales,
+} = Astro.props;
+
+const pageUrl = canonicalURL ?? new URL(Astro.url.pathname, Astro.site).href;
+const language = locale ?? Astro.currentLocale ?? site.lang;
+const modifiedDate = modDatetime ?? pubDatetime;
+const authorSameAs = Array.from(
+  new Set(
+    [site.profile, ...config.socials.map(({ url }) => url)].filter(
+      (url): url is string => Boolean(url && /^https?:\/\//.test(url))
+    )
+  )
+);
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: title ?? site.title,
+  headline: headline ?? title ?? site.title,
+  url: pageUrl,
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": pageUrl,
+  },
+  ...(description && { description }),
+  ...(articleAbstract && { abstract: articleAbstract }),
+  inLanguage: language,
   image: ogImage,
   ...(pubDatetime && { datePublished: pubDatetime.toISOString() }),
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+  ...(modifiedDate && { dateModified: modifiedDate.toISOString() }),
   author: [
     {
       "@type": "Person",
       name: site.author,
       ...(site.profile && { url: site.profile }),
+      ...(authorSameAs.length > 0 && { sameAs: authorSameAs }),
     },
   ],
 };
 ---
 
-<Layout {title} {description} {ogImage} {canonicalURL}>
+<Layout {title} {description} {ogImage} canonicalURL={pageUrl} {alternateLocales}>
   <Fragment slot="head">
     <!-- Override og:type for article pages -->
     <meta property="og:type" content="article" />

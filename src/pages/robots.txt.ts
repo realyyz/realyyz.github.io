@@ -1,6 +1,9 @@
 import type { APIRoute } from "astro";
 
 const getRobotsTxt = (sitemapURL: URL) => `
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: *
 Allow: /
 

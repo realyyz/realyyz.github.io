@@ -1,7 +1,15 @@
 ---
 import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
-import { RTL_LOCALES } from "@/i18n/locales";
+import {
+  RTL_LOCALES,
+  SUPPORTED_LOCALES,
+  type SupportedLocale,
+} from "@/i18n/locales";
+import {
+  getLocaleAlternates,
+  getXDefaultAlternate,
+} from "@/utils/getLocaleAlternates";
 import { resolveDefaultOgImagePath } from "@/utils/resolveDefaultOgImagePath";
 import { getRssPath } from "@/utils/getRssPath";
 import { getAssetPath } from "@/utils/withBase";
@@ -13,6 +21,7 @@ type Props = {
   description?: string;
   ogImage?: string;
   canonicalURL?: string;
+  alternateLocales?: readonly SupportedLocale[];
 };
 
 const { site } = config;
@@ -22,11 +31,21 @@ const {
   description = site.description,
   ogImage = resolveDefaultOgImagePath(config),
   canonicalURL = new URL(Astro.url.pathname, Astro.site).href,
+  alternateLocales = SUPPORTED_LOCALES,
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.site ?? Astro.url);
 const rssHref = getRssPath(Astro.currentLocale ?? config.site.lang);
 const currentLocale = Astro.currentLocale ?? site.lang;
+const localeAlternates = getLocaleAlternates(
+  Astro.url.pathname,
+  currentLocale,
+  alternateLocales
+);
+const xDefaultAlternate = getXDefaultAlternate(
+  Astro.url.pathname,
+  currentLocale
+);
 const dir = RTL_LOCALES.includes(currentLocale) ? "rtl" : (site.dir ?? "ltr");
 ---
 
@@ -42,6 +61,20 @@ const dir = RTL_LOCALES.includes(currentLocale) ? "rtl" : (site.dir ?? "ltr");
     <link rel="icon" type="image/svg+xml" href={getAssetPath("favicon.svg")} />
     <link rel="icon" href={getAssetPath("favicon.ico")} />
     <link rel="canonical" href={canonicalURL} />
+    {
+      localeAlternates.map(({ locale, href }) => (
+        <link
+          rel="alternate"
+          hreflang={locale}
+          href={new URL(href, Astro.site)}
+        />
+      ))
+    }
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={new URL(xDefaultAlternate, Astro.site)}
+    />
     <meta name="generator" content={Astro.generator} />
 
     <!-- Font -->
