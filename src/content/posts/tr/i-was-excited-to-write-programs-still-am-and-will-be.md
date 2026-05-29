@@ -9,20 +9,20 @@ tags:
   - Notes
 ---
 
->Özet
-
+>**Özet**
+>
 >Bu yazı, "programcılar asla yerini kaybetmeyecek" demiyor; programlamanın önemli olmasının birincil sebebi yüksek gelirli bir meslek olması değil, bireyin ilk kez doğrudan genel amaçlı hesaplama gücüyle konuşabilmesini sağlaması.
-
+>
 >Bilgi devrimi, buhar ve elektrik devrimlerinden farklıdır. Buhar ve elektrik esas olarak insanın fiziksel gücünü, enerjiyi ve dış üretim kapasitesini artırırken; kişisel bilgisayar ve yazılım, genel bir bilişsel makineyi bireyin eline verir, sıradan insanların kendi makinelerinin başında bir fikri çalışan bir şeye dönüştürmesine olanak tanır. Programcıların son on yıllardaki kaldıracı, bu "insan niyetini makine diline çevirme" gücünden geliyordu.
-
+>
 >LLM'ler bu eşiği zayıflatıyor. Doğal dili de bilgisayarı çalıştırmak için bir arayüz haline getirerek, daha önce yalnızca programcılara ait olan kaldıracın bir kısmını daha çok insana kazandırıyor. Ancak bu, mevcut LLM'lerin zaten AGI olduğu anlamına gelmez. Bazı Turing testlerinde yeterince insan gibi görünse de, hâlâ büyük ölçüde insan uzmanlara, sermayeye ve devasa hesaplama gücüne dayanarak yeteneklerini geliştirmektedir. Henüz kendi kendini eğiten, kendi kendine oyun oynayan, kendi kendini geliştiren gerçek bir kapalı döngü oluşturmuş değildir.
-
+>
 >Asıl alarm verici olan şudur: Yapay zekâ altyapısı daha da merkezileşebilir. Kişisel bilgisayar çağı hesaplama gücünü bireyin masasına koyarken, yapay zekâ çağı en güçlü modelleri, çipleri, veri merkezlerini ve platform giriş noktalarını az sayıda şirket ve varlıklı insanın elinde topluyor. Bu hem heyecan verici hem de hayal kırıklığı yaratıcı: Sıradan insanlar daha güçlü araçlara kavuşurken, aynı zamanda daha gizli bir platform bağımlılığına girebilir.
-
+>
 >Dinsiz, natüralist bir bakış açısından, güçlü yapay zekâ er ya da geç ortaya çıkacaktır. İnsan zekâsı ve bilinç, beyin denen organdan kaynaklanır; maddi sistemler zekâ ve bilinç üretebildiğine göre, makinelerin insan beynini aşamayacağını ya da bilinç üretemeyeceğini söylemek için ilkesel bir engel yoktur. Güçlü yapay zekâ bir kez ortaya çıktığında, anlamı "işleri elimizden alması"nın ötesine geçecek; çünkü belki de insanlığın icat ettiği "kendisinden daha iyi icat yapabilen" ilk şey olacak.
-
+>
 >Ama güçlü yapay zekâ gelse ve program yazmanın ekonomik değeri kalmasa bile, ben yazmaya devam edeceğim. İnsanlar go yapay zekâsını yenemese de hâlâ go oynuyor, arabalardan hızlı koşamasa da koşuyor; programlamanın değeri yalnızca makineyi geçmekte değil. O bir tavrı temsil eder: Dünyanın kurallarını kendi aklınla anlamak, algoritmaların inceliğini kavramanın keyifli olduğunu bilmek. Birçok insan para için değil, programlamanın kendisi ilginç olduğu için programcı oldu.
-
+>
 >İşte başlık bu yüzden: I was excited to write programs. Still am. And will be.
 
 

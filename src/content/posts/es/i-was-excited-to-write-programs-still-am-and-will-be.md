@@ -10,19 +10,19 @@ tags:
 ---
 
 >Resumen
-
+>
 >Lo que este artículo quiere decir no es que "los programadores nunca serán reemplazados", sino que la programación es importante, en primer lugar, no porque sea una profesión de altos ingresos, sino porque permite a los individuos interactuar directamente con la capacidad de computación universal por primera vez.
-
+>
 >La revolución de la información es diferente de las revoluciones del vapor y la electricidad. El vapor y la electricidad amplificaron principalmente la fuerza física, la energía y la capacidad de producción externa; el PC y el software, en cambio, pusieron una máquina cognitiva universal en manos de las personas, permitiendo a la gente común sentarse frente a su máquina y convertir una idea en algo que funcione. El apalancamiento de los programadores en las últimas décadas proviene de este poder de "traducir la intención humana al lenguaje de las máquinas".
-
+>
 >Los LLM están reduciendo esta barrera. Hacen que el lenguaje natural también pueda ser una interfaz para operar computadoras, permitiendo que más personas obtengan parte del apalancamiento que antes solo tenían los programadores. Pero esto no significa que los LLM actuales ya sean IAG. Incluso si en algunas pruebas de Turing se parecen lo suficiente a un humano, siguen dependiendo en gran medida de expertos humanos, capital y enormes recursos computacionales para impulsar la evolución de sus capacidades. Todavía no han formado un ciclo cerrado de autoentrenamiento, autojuego y automejora.
-
+>
 >Lo que realmente merece atención es que la capa subyacente de la IA podría estar aún más concentrada. La era del PC puso la capacidad de computación en los escritorios personales; la era de la IA concentra los modelos más potentes, los chips, los centros de datos y los puntos de acceso a las plataformas en manos de unas pocas empresas y personas ricas. Esto provoca tanto entusiasmo como decepción: las personas comunes obtienen herramientas más poderosas, pero también pueden caer en una dependencia más oculta de las plataformas.
-
+>
 >Desde una posición sin creencias religiosas y naturalista, la IA fuerte terminará apareciendo. La inteligencia y la conciencia humanas provienen del órgano del cerebro; dado que un sistema material puede producir inteligencia y conciencia, no hay una razón de principio para afirmar que una máquina nunca superará al cerebro humano o que nunca podrá generar conciencia. Una vez que aparezca la IA fuerte, su importancia irá más allá de "quitar trabajos", porque podría ser la primera cosa que la humanidad invente que sea "más capaz de inventar que nosotros mismos".
-
+>
 >Pero incluso si llega la IA fuerte, incluso si escribir programas pierde valor económico, yo seguiré escribiendo. Así como los humanos, aunque no puedan ganar a una IA de Go, siguen jugando; aunque no puedan correr más rápido que un coche, siguen corriendo, el valor de la programación no reside solo en superar a la máquina. Representa una actitud: usar la propia cabeza para entender las reglas del mundo, apreciar la elegancia de los algoritmos es interesante; muchas personas eligen ser programadores no por el dinero sino porque la programación en sí es divertida.
-
+>
 >Por eso el título es: I was excited to write programs. Still am. And will be.
 
 

@@ -10,17 +10,17 @@ tags:
 ---
 
 >Bài viết này không nhằm nói rằng 'lập trình viên sẽ không bao giờ bị thay thế', mà là: lập trình quan trọng trước hết không phải vì nó là một nghề thu nhập cao, mà vì nó cho phép cá nhân lần đầu tiên có thể trực tiếp đối thoại với năng lực tính toán phổ quát.
-
+>
 >Cách mạng thông tin khác với cách mạng hơi nước và điện. Hơi nước và điện chủ yếu khuếch đại sức lao động, năng lượng và năng lực sản xuất bên ngoài của con người; PC và phần mềm trao cho cá nhân một cỗ máy nhận thức phổ quát, cho phép người bình thường ngồi trước máy của mình, biến một ý tưởng thành thứ hoạt động được. Đòn bẩy của lập trình viên trong mấy chục năm qua đến từ quyền lực 'dịch ý định của con người sang ngôn ngữ máy' này.
-
+>
 >LLM đang làm suy yếu rào cản này. Nó khiến ngôn ngữ tự nhiên cũng có thể trở thành giao diện tương tác với máy tính, cho phép nhiều người hơn có được đòn bẩy mà trước đây chỉ lập trình viên mới có. Nhưng điều này không có nghĩa LLM hiện tại đã là AGI. Ngay cả khi nó đủ giống con người trong một số bài kiểm tra Turing, nó vẫn chủ yếu dựa vào chuyên gia con người, vốn và sức mạnh tính toán khổng lồ để thúc đẩy tiến hóa năng lực. Nó chưa thực sự hình thành vòng lặp khép kín tự huấn luyện, tự đấu trí và tự cải tiến.
-
+>
 >Điều thực sự đáng cảnh giác là: tầng nền của AI lại có thể tập trung hơn. Thời đại PC đặt năng lực tính toán lên bàn làm việc cá nhân, nhưng thời đại AI lại tập trung mô hình mạnh nhất, chip, trung tâm dữ liệu và lối vào nền tảng vào tay một số ít công ty và người giàu. Điều này khiến người ta vừa phấn khởi vừa thất vọng: người thường có được công cụ mạnh hơn, nhưng cũng có thể rơi vào sự phụ thuộc nền tảng kín đáo hơn.
-
+>
 >Từ góc nhìn không tôn giáo, theo chủ nghĩa tự nhiên, AI mạnh mẽ cuối cùng sẽ xuất hiện. Trí tuệ và ý thức của con người đến từ cơ quan não bộ; vì hệ thống vật chất có thể tạo ra trí tuệ và ý thức, không có lý do nguyên tắc nào để khẳng định máy móc không bao giờ vượt qua não người, cũng như không thể khẳng định máy móc không thể có ý thức. Một khi AI mạnh xuất hiện, ý nghĩa của nó sẽ vượt qua 'cướp việc làm', vì nó có thể trở thành thứ đầu tiên con người phát minh ra mà 'giỏi phát minh hơn chính mình'.
-
+>
 >Nhưng ngay cả khi AI mạnh đến, ngay cả khi viết chương trình mất đi giá trị kinh tế, tôi vẫn sẽ tiếp tục viết. Giống như con người không cờ vây giỏi bằng AI nhưng vẫn chơi cờ, không chạy nhanh bằng xe hơi nhưng vẫn chạy bộ, giá trị của lập trình không chỉ ở việc vượt qua máy móc. Nó thể hiện một thái độ: tự mình động não để hiểu quy luật của thế giới, hiểu được sự tinh tế của thuật toán là thú vị; nhiều người chọn trở thành lập trình viên không phải vì tiền mà vì bản thân lập trình đã thú vị.
-
+>
 >Vậy nên tiêu đề mới là: I was excited to write programs. Still am. And will be.
 
 

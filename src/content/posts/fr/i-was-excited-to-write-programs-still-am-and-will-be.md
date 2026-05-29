@@ -10,19 +10,19 @@ tags:
 ---
 
 >Résumé
-
+>
 >Ce que cet article veut dire, ce n’est pas que « les programmeurs ne seront jamais remplacés », mais plutôt : si la programmation est importante, ce n’est pas d’abord parce que c’est un métier bien rémunéré, mais parce qu’elle permet à l’individu, pour la première fois, de dialoguer directement avec une capacité de calcul universelle.
-
+>
 >La révolution de l’information est différente de celles de la vapeur et de l’électricité. La vapeur et l’électricité amplifient surtout la force physique, l’énergie et la capacité de production externe ; l’ordinateur personnel et les logiciels mettent entre les mains de l’individu une machine cognitive universelle, permettant à une personne ordinaire de s’asseoir devant sa machine et de transformer une idée en quelque chose qui fonctionne. L’effet de levier dont bénéficient les programmeurs depuis des décennies provient de ce pouvoir de « traduire l’intention humaine en langage machine ».
-
+>
 >Les LLM sont en train d’abaisser cette barrière. Ils font du langage naturel une interface pour piloter l’ordinateur, donnant à davantage de personnes une partie du levier autrefois réservé aux programmeurs. Mais cela ne signifie pas pour autant que les LLM actuels soient une IAG. Même s’ils semblent suffisamment humains dans certains tests de Turing, ils dépendent encore largement d’experts humains, de capitaux et d’une immense puissance de calcul pour faire évoluer leurs capacités. Ils n’ont pas encore formé une boucle autonome d’auto‑apprentissage, d’auto‑jeu et d’auto‑amélioration.
-
+>
 >Ce qui est vraiment préoccupant, c’est que l’infrastructure de l’IA risque d’être encore plus concentrée. L’ère du PC a mis la puissance de calcul sur le bureau des particuliers ; l’ère de l’IA, elle, concentre les meilleurs modèles, les puces, les centres de données et les points d’accès aux plateformes entre les mains de quelques entreprises et personnes fortunées. Cela suscite à la fois de l’enthousiasme et de la déception : l’individu ordinaire obtient des outils plus puissants, mais risque aussi de tomber dans une dépendance plus insidieuse aux plateformes.
-
+>
 >D’un point de vue non religieux et naturaliste, une IA forte finira par apparaître. L’intelligence et la conscience humaines sont issues du cerveau, un organe matériel ; puisqu’un système matériel peut produire de l’intelligence et de la conscience, rien ne permet d’affirmer par principe qu’une machine ne pourra jamais surpasser le cerveau humain, ni qu’elle ne pourra jamais avoir de conscience. Une fois qu’une IA forte émergera, sa portée dépassera la question du « vol d’emplois », car elle pourrait bien être la première chose que l’humanité invente qui soit « plus inventive que l’humain ».
-
+>
 >Mais même si une IA forte advient, même si écrire des programmes perd sa valeur économique, je continuerai à le faire. Comme les humains continuent à jouer aux échecs ou au go alors que l’IA les bat, comme ils continuent à courir alors que les voitures vont plus vite, la valeur de la programmation n’est pas seulement de surpasser la machine. C’est une attitude : comprendre soi-même les règles du monde, trouver plaisir à la finesse des algorithmes. Beaucoup ne sont pas devenus programmeurs pour l’argent, mais parce que programmer en soi est intéressant.
-
+>
 >C’est pourquoi le titre est : J’étais excité de programmer. Je le suis toujours. Et le serai.
 
 
