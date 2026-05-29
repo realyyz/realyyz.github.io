@@ -10,12 +10,19 @@ tags:
 ---
 
 >**Summary**
+>
 >This article isn’t about “programmers will never be replaced.” It’s about why programming matters—not primarily as a high-income profession, but because it gave individuals, for the first time, the ability to converse directly with general-purpose computing power.
+>
 >The information revolution differs from the steam and electricity revolutions. Steam and electricity mainly amplified physical strength, energy, and external production capacity; the PC and software put a universal cognitive machine into individual hands, allowing ordinary people to sit in front of their own machine and turn an idea into something that runs. The leverage programmers have enjoyed in recent decades comes from this “power to translate human intent into machine language.”
+>
 >LLMs are lowering that barrier. They enable natural language to serve as an interface for operating computers, giving more people access to some of the leverage that was once exclusive to programmers. But that does not mean current LLMs are AGI. Even if they pass certain Turing tests convincingly, they still rely heavily on human experts, capital, and massive computing power to advance their capabilities. They have not yet formed a closed loop of self-training, self-play, and self-improvement.
+>
 >What truly deserves attention is this: the AI infrastructure may become even more centralized. The PC era put computing power on personal desks; the AI era concentrates the strongest models, chips, data centers, and platform gateways in the hands of a few companies and wealthy individuals. This is both exciting and disappointing: ordinary people gain more powerful tools, but may also enter a more subtle form of platform dependency.
+>
 >From a secular, naturalistic standpoint, strong AI will eventually emerge. Human intelligence and consciousness arise from the brain as a physical organ. Since a material system can produce intelligence and consciousness, there is no principled reason to assert that machines can never surpass the human brain or that machines can never become conscious. Once strong AI appears, its significance will go beyond “taking jobs,” for it may become the first invention by humanity that is “better at inventing than we are.”
+>
 >But even when strong AI arrives, even if writing programs loses its economic value, I will continue to write. Just as humans still play Go despite being outmatched by AI, and still run despite being slower than cars, the value of programming is not only in outdoing machines. It represents an attitude: understanding the world’s rules through one’s own reasoning, appreciating the elegance of algorithms. Many people chose to become programmers not for money, but because programming itself is fascinating.
+>
 >Hence the title: I was excited to write programs. Still am. And will be.
 
 
