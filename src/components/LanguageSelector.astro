@@ -32,13 +32,13 @@ const languageLinks = SUPPORTED_LOCALES.map(code => ({
 
 <details class="language-selector relative">
   <summary
-    class="focus-outline hover:text-accent flex min-w-12 list-none flex-col items-center justify-center gap-0.5 p-1 sm:min-w-20 [&::-webkit-details-marker]:hidden"
+    class="focus-outline hover:text-accent flex min-w-12 cursor-pointer list-none flex-col items-center justify-center gap-0.5 p-1 sm:min-w-20 [&::-webkit-details-marker]:hidden"
     title={t.a11y.selectLanguage}
     aria-label={t.a11y.selectLanguage}
   >
     <IconLanguage class="size-6" />
-    <span class="text-muted-foreground text-center text-[0.65rem] leading-none">
-      Click to change language
+    <span class="text-muted-foreground text-center text-[1.25rem] leading-none">
+      Click here to change language
     </span>
   </summary>
 
@@ -54,7 +54,7 @@ const languageLinks = SUPPORTED_LOCALES.map(code => ({
             data-locale={code}
             aria-current={isCurrent ? "true" : undefined}
             class:list={[
-              "hover:text-accent block rounded px-3 py-2 text-sm whitespace-nowrap",
+              "hover:text-accent block cursor-pointer rounded px-3 py-2 text-sm whitespace-nowrap",
               { "text-accent font-semibold": isCurrent },
             ]}
           >

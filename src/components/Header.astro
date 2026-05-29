@@ -43,9 +43,7 @@ const isActive = (path: string) => {
   {t.a11y.skipToContent}
 </a>
 
-<header
-  class="app-layout flex flex-col items-center justify-between sm:flex-row"
->
+<header class="app-layout flex flex-col items-center">
   <div
     class="border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"
   >
@@ -144,9 +142,6 @@ const isActive = (path: string) => {
             </li>
           )
         }
-        <li class="col-span-1 flex items-center justify-center">
-          <LanguageSelector />
-        </li>
         {
           features.lightAndDarkMode && (
             <li class="col-span-1 flex items-center justify-center">
@@ -165,6 +160,11 @@ const isActive = (path: string) => {
         }
       </ul>
     </nav>
+  </div>
+  <div
+    class="border-border bg-background flex w-full justify-center border-b py-2"
+  >
+    <LanguageSelector />
   </div>
 </header>
 
