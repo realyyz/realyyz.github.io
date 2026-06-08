@@ -1,5 +1,5 @@
 ---
-title: "J’étais excité de programmer. Je le suis toujours. Et le serai."
+title: "La programmation m’a toujours passionné. C’est encore le cas. Et le sera."
 description: "Pourquoi la programmation reste importante à l'ère des LLM, de l'IA forte et de la concentration des plateformes."
 pubDatetime: 2026-05-28
 featured: true
@@ -9,7 +9,7 @@ tags:
   - Notes
 ---
 
->Résumé
+>**Résumé**
 >
 >Ce que cet article veut dire, ce n’est pas que « les programmeurs ne seront jamais remplacés », mais plutôt : si la programmation est importante, ce n’est pas d’abord parce que c’est un métier bien rémunéré, mais parce qu’elle permet à l’individu, pour la première fois, de dialoguer directement avec une capacité de calcul universelle.
 >
